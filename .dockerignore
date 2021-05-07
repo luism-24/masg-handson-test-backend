@@ -1,0 +1,4 @@
+.gitignore
+**/*.md
+applications/app-services/config/*
+#applications/app-services/src/main/resources/config/application.yml

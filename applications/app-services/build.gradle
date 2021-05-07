@@ -1,0 +1,16 @@
+plugins {
+    id "org.springframework.boot"
+}
+
+dependencies {
+
+    //Domain
+    compile project(":domain-model")
+    compile project(":domain-usecase")
+    compile project(":entry-points-rest-api")
+
+    //Infrastructure
+    compile project(":driven-adapters-external-services-repository")
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+}

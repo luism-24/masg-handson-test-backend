@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: 'masg-handson-test'
+external-api:
+  url: http://masglobaltestapi.azurewebsites.net
