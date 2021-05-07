@@ -8,4 +8,5 @@ import java.util.List;
 public interface EmployeeGateway {
 
     List<Employee> getAllEmployees();
+    Employee getEmployeeById(Integer id);
 }

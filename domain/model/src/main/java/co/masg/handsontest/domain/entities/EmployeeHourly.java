@@ -1,8 +1,5 @@
 package co.masg.handsontest.domain.entities;
 
-import lombok.Data;
-
-@Data
 public class EmployeeHourly extends Employee {
     
     @Override

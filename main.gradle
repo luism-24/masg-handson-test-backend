@@ -25,7 +25,6 @@ subprojects {
         testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
         testImplementation("org.junit.platform:junit-platform-runner:1.7.0")
         testImplementation 'org.mockito:mockito-junit-jupiter:3.7.7'
-        testImplementation("uk.co.jemos.podam:podam:7.2.6.RELEASE")
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 
         //Annotation Processors

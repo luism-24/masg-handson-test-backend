@@ -4,6 +4,7 @@ import co.masg.handsontest.clients.EmployeeClient;
 import co.masg.handsontest.data.EmployeeData;
 import co.masg.handsontest.domain.entities.Employee;
 import co.masg.handsontest.domain.entities.EmployeeMonthly;
+import co.masg.handsontest.domain.exception.BusinessException;
 import co.masg.handsontest.domain.gateways.EmployeeGateway;
 import co.masg.handsontest.domain.utils.ListUtils;
 import lombok.RequiredArgsConstructor;
@@ -20,5 +21,14 @@ public class EmployeeAdapter implements EmployeeGateway {
     @Override
     public List<Employee> getAllEmployees() {
         return ListUtils.convertList(employeeClient.getAll(), EmployeeData::convertToEmployee);
+    }
+
+    @Override
+    public Employee getEmployeeById(Integer id) {
+        return ListUtils.convertList(employeeClient.getAll(), EmployeeData::convertToEmployee)
+                .stream()
+                .filter(employeeDto -> employeeDto.getId().equals(id))
+                .findFirst()
+                .orElseThrow(()-> new BusinessException("No se encontro el employee ".concat(id.toString())));
     }
 }

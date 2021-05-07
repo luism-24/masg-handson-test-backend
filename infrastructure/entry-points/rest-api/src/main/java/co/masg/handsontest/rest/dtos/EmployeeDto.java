@@ -28,7 +28,7 @@ public class EmployeeDto {
                 .roleDescription(employee.getRoleDescription())
                 .hourlySalary(employee.getHourlySalary())
                 .monthlySalary(employee.getMonthlySalary())
-                .annualSalary(employee.calculateSalary())
+                .annualSalary(employee.getAnnualSalary())
                 .build();
     }
 }
